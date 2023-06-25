@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" charset="UTF-8"/>
+  <style>
+     * {
+      max-width: 100%;
+    }
+
+    body {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text{
+        font-family: Trebuchet, sans-serif;
+        font-size: 27px;
+        font-weight: bold;
+        color: #25304e; 
+    }
+
+    .main .search-box {
+      position: static;
+    }
+
+    .main .search-box input[type="text"] {
+      padding-right: 70px; /* Adjust the value as needed */
+    }
+
+    .main .search-box a {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+
+    input {
+      border: 3px solid #409ec1;
+      background-color: #409ec1;
+      height: 30px;
+      width: auto;
+      border-radius: 10px;
+      padding: 0px 10px;
+    }
+    
+    menu{
+        height: 50px;
+        background-color: #ececec;
+        display: flex; 
+        justify-content: right;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    menu .navbar ul{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+    }
+
+    menu .navbar ul li{
+        font-family: Trebuchet, sans-serif;
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 20px;
+    }
+
+    menu .navbar ul li a{
+        text-decoration: none;
+        position: relative;
+        font-size: 17px;
+        color:#363B49;
+        padding: 10px 0;
+    }
+
+    menu .navbar ul li a:before{
+        position:absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: #363B49;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    menu .navbar ul li a:hover:before{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .blue-row{
+        height: 40px;
+        background-color: #25304e;
+    }
+
+    .h-n{
+        font-family: Trebuchet, sans-serif;
+        font-size: 20px;
+        color: #ffffff; 
+    }
+
+    .tabs{
+        font-family: Trebuchet, sans-serif;
+        font-size: 17px;
+        color: #000; 
+    }
+
+    .programs{
+        height: 600px;
+        background-color: #409ec1;
+    }
+
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+      
+    .fixed-button {
+        position: absolute;
+        top: 340px;
+        left: 80%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+      
+    .programs button{
+        font-family: Trebuchet, sans-serif;
+        font-size: 15px;
+        color: #25304e;
+        border: none;
+        outline: none;
+        padding: 10px 17px;
+        border-radius: 10px;
+    }
+
+    .programs button:hover {
+        background-color: #25304e;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .latest-news{
+        height: 600px;
+        background-color: #ececec;
+    }
+
+    .container{
+        padding: 2rem;
+    }
+
+    .slider-wrapper{
+        position: relative;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .slider-button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+    .slider-button#prevButton {
+        left: 10px;
+      }
+
+    .slider-button#nextButton {
+        right: 10px;
+      }
+
+    .slider {
+        display: flex;
+        aspect-ratio: 21 / 9;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    }
+
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+
+    .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #393939;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+    }
+
+    .slider-nav a:hover {
+        opacity: 1rem;
+    }
+
+    .dean{
+        background-color: #409ec1;
+    }
+
+    .footer{
+        height: 40px;
+        background-color: #25304e;
+    }
+
+    .fone{
+        font-family: Trebuchet, sans-serif;
+        font-size: 16px;
+        color: #ffff; 
+    }
+  </style>
+</head>
+
+<body>
+<table class="table" cellpadding="0" cellspacing="0">
+<!-- header -->
+  <tr>
+      <td><table class="table">
+        <tr>
+          <td width="11%" height="45">&nbsp;</td>
+          <td width="10%"><div><img src="cie_logo.png" width="100px" height="100px"></div></td>
+          <td width="52%"><div class="text" align="left">COLLEGE OF INDUSTRIAL EDUCATION </div></td>
+          <td width="27%">
+            <div class="main">
+              <div class="search-box">
+                <input type="text" name="box" placeholder="Search...">
+              </div>
+            </div>
+          </td>          
+        </tr>
+      </table></td>
+  </tr>
+<!-- navigation buttons -->
+  <tr>
+    <td height="30">
+      <menu>
+        <nav class="navbar">
+          <ul class="tab">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="community.html">College Community</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </menu>
+    </td>
+  </tr>
+<!-- image slider -->
+  <tr>
+      <td>
+          <section class="container">
+              <div class="slider-wrapper">
+                <button id="prevButton" class="slider-button"><</button>
+                <button id="nextButton" class="slider-button">></button>
+                <div class="slider">
+                  <img id="slide-1" src="hm_slide1.png" alt="about cie" />
+                  <img id="slide-2" src="hm_slide2.png" alt="cie csc" />
+                  <img id="slide-3" src="hm_slide3.png" alt="announcment" />
+                  <img id="slide-4" src="hm_slide4.png" alt="congratulations" />
+                </div>
+                <div class="slider-nav">
+                  <a href="#slide-1"></a>
+                  <a href="#slide-2"></a>
+                  <a href="#slide-3"></a>
+                  <a href="#slide-4"></a>
+                </div>
+              </div>
+          </section>
+      </td>
+  </tr>
+<!-- programs offered -->
+  <tr>
+      <td>
+          <img src="programs.png" alt="programs offered" style="width: 100%; height: auto;">
+      </td>
+          <table width="100%" class="programs" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="50%" align="center">
+                <div class="image-wrapper">
+                  <a href="about.html#section1"><button class="fixed-button">Read More</button></a>
+                  <img src="hm_undergrad.png" alt="undergrad programs" width="630" height="550" style="max-width: 100%; height: auto;">
+                </div>
+              </td>
+              <td width="50%" align="center">
+                <div class="image-wrapper">
+                  <a href="about.html#section2"><button class="fixed-button">Read More</button></a>
+                  <img src="hm_grad.png" alt="graduate programs" width="630" height="550" style="max-width: 100%; height: auto;">
+                </div>
+              </td>
+            </tr>              
+          </table>
+  </tr>
+<!-- latest news -->
+  <tr>
+      <td>
+          <img src="latestnews.png" alt="programs offered" width="100%"/>
+      </td>
+      <td>
+          <table class="table" cellpadding="0" cellspacing="0">
+          <tr>
+              <td class="latest-news" width="33.33%" align="center"><a href="news.html#section1">
+                <img src="news0.png" alt="programs offered" width="430" height="550" style="max-width: 100%; height: auto;"></a></td>
+              <td class="latest-news" width="33.33%" align="center"><a href="news.html#section2">
+                <img src="news1.png" alt="programs offered" width="430" height="550" style="max-width: 100%; height: auto;"></a></td>
+              <td class="latest-news" width="33.33%" align="center"><a href="news.html#section3">
+                <img src="news2.png" alt="programs offered" width="430" height="550" style="max-width: 100%; height: auto;"></a></td>
+          </tr>
+          </table>
+      </td>         
+  </tr>
+<!-- about the dean -->
+  <tr>
+      <td class="dean">
+          <img src="dean.png" alt="programs offered" width="100%"/>
+      </td>
+  </tr>
+<!-- footer -->
+  <tr>
+    <td><table class="table" cellpadding="0" cellspacing="0">
+      <tr class="footer">
+        <td width="15%" ><div class="h-a" align="center">&nbsp;</div></td>
+        <td width="45%" ><div class="h-a" align="left"></div></td>
+        <td width="40%" ><div class="h-a" align="center"></div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table class="table" cellpadding="0" cellspacing="0">
+      <tr class="footer">
+        <td width="15%" ><div align="center">&nbsp;</div></td>
+        <td width="45%" ><div class="fone" align="left">College of Industrial Education<br>
+          Technological University of the Philippines - Manila<br>
+          San Marcelino St, Ayala Blvd, Ermita<br> 
+          Manila, Philippines 1000</div></td>
+        <td width="40%" ><div class="fone" align="center">Contact Us &nbsp;&nbsp;&nbsp;&nbsp; About Us</div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table class="table" cellpadding="0" cellspacing="0">
+      <tr class="footer">
+        <td width="15%" ><div align="center">&nbsp;</div></td>
+        <td width="45%" ><div></div></td>
+        <td width="40%" ><div align="center">&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/CIEStudentCouncilManila"><img src="ftr_icon_fb.png" alt="fb" border="0" 
+          style="position: ; width: 40px; height: 40px;" /></a>&nbsp;<a href="https://twitter.com/tupm_CIEcsc"><img src="ftr_icon_twt.png" alt="fb" border="0" 
+          style="position: ; width: 40px; height: 40px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/ciestudentcouncil/"><img src="ftr_icon_ig.png" 
+          alt="fb"  style="position: ; width: 40px; height: 40px;" /></a>&nbsp;<a href="mailto:usg.cie@tup.edu.ph"><img src="ftr_icon_email.png" alt="fb" border="0" style="position: ; width: 40px;
+          height: 40px;" /></a>&nbsp;</div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table class="table" cellpadding="0" cellspacing="0">
+      <tr class="footer">
+        <td width="15%" ><div align="center">&nbsp;</div></td>
+        <td width="45%" ><div class="fone" align="left">Legal Info | www.tup.edu.ph<br>
+          © 2023 Technological University of the Philippines - Manila</div></td>
+        <td width="40%" ><div align="center"></div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table class="table" cellpadding="0" cellspacing="0">
+      <tr class="footer">
+        <td width="15%" ><div class="h-n" align="center">&nbsp;</div></td>
+        <td width="45%" ><div class="h-n" align="left"></div></td>
+        <td width="40%" ><div class="h-n" align="center"></div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<!-- Image Slider javascript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
+    var slider = document.querySelector('.slider');
+    var slides = Array.from(slider.querySelectorAll('img'));
+    var currentSlideIndex = 0;
+    var slideInterval = 2000; // set slide interval in milliseconds (e.g., 2000ms = 2 seconds)
+    var timer; 
+
+    // function to show the next slide
+    function showNextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      showSlide(currentSlideIndex);
+    }
+
+    // function to show a specific slide
+    function showSlide(index) {
+      slides.forEach(function(slide) {
+        slide.style.display = 'none';
+      });
+      slides[index].style.display = 'block';
+      currentSlideIndex = index;
+      updateButtonsVisibility();
+    }
+
+    // function to update the visibility of previous and next buttons
+    function updateButtonsVisibility() {
+      prevButton.style.display = 'block';
+      nextButton.style.display = 'block';
+    }
+
+    // add click event listener for the previous button
+    prevButton.addEventListener('click', function() {
+      clearTimeout(timer); // clear the automatic slide timer when manually navigating
+      showPreviousSlide();
+    });
+
+    // add click event listener for the next button
+    nextButton.addEventListener('click', function() {
+      clearTimeout(timer); // clear the automatic slide timer when manually navigating
+      showNextSlide();
+    });
+
+    // function to start the automatic slide timer
+    function startSlideTimer() {
+      timer = setTimeout(function() {
+        showNextSlide();
+        startSlideTimer();
+      }, slideInterval);
+    }
+
+    // get references to the slider navigation links
+    var sliderNavLinks = Array.from(document.querySelectorAll('.slider-nav a'));
+
+    // add click event listeners for each navigation link
+    sliderNavLinks.forEach(function(link, index) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        clearTimeout(timer); // clear the automatic slide timer when manually navigating
+        showSlide(index);
+      });
+    });
+
+    // show the initial slide
+    showSlide(currentSlideIndex);
+    // start the automatic slide timer
+    startSlideTimer();
+  });
+</script>
+</body>
+</html>
+  
